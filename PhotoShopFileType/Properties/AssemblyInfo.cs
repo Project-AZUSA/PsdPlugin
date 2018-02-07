@@ -5,7 +5,8 @@
 //
 // This software is provided under the MIT License:
 //   Copyright (c) 2006-2007 Frank Blumenberg
-//   Copyright (c) 2010-2016 Tao Yue
+//   Copyright (c) 2010-2018 Tao Yue
+//   Copyright (c) 2018      Ulysses Wu
 //
 // See LICENSE.txt for complete licensing and attribution information.
 //
