@@ -152,18 +152,18 @@ namespace PhotoshopFile
         public bool IsLargeDocument =>
           (Version == PsdFileVersion.PsbLargeDocument);
 
-        private Int16 channelCount;
+        private Int16 _channelCount;
         /// <summary>
         /// The number of channels in the image, including any alpha channels.
         /// </summary>
         public Int16 ChannelCount
         {
-            get => channelCount;
+            get => _channelCount;
             set
             {
                 if (value < 1 || value > 56)
                     throw new ArgumentException("Number of channels must be from 1 to 56.");
-                channelCount = value;
+                _channelCount = value;
             }
         }
 
@@ -210,13 +210,13 @@ namespace PhotoshopFile
             }
         }
 
-        private int bitDepth = 8;
+        private int _bitDepth = 8;
         /// <summary>
         /// The number of bits per channel. Supported values are 1, 8, 16, and 32.
         /// </summary>
         public int BitDepth
         {
-            get => bitDepth;
+            get => _bitDepth;
             set
             {
                 switch (value)
@@ -225,7 +225,7 @@ namespace PhotoshopFile
                     case 8:
                     case 16:
                     case 32:
-                        bitDepth = value;
+                        _bitDepth = value;
                         break;
                     default:
                         throw new NotImplementedException("Invalid bit depth.");

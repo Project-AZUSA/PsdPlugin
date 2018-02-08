@@ -311,7 +311,7 @@ namespace PhotoshopFile
         public int Width => Rect.Width;
         public int Height => Rect.Height;
 
-        public unsafe bool SetBitmap(Bitmap bmp, ImageReplaceOption option = ImageReplaceOption.KeepCenter, bool rleCompress = false)
+        public unsafe bool SetBitmap(Bitmap bmp, ImageReplaceOption option = ImageReplaceOption.KeepCenter, ImageCompression compress = ImageCompression.Raw)
         {
             if (bmp.PixelFormat != PixelFormat.Format32bppArgb && bmp.PixelFormat != PixelFormat.Format24bppRgb)
             {
@@ -334,7 +334,7 @@ namespace PhotoshopFile
                 for (int i = -1; i < 3; i++)
                 {
                     var ch = new Channel((short)i, this);
-                    ch.ImageCompression = rleCompress ? ImageCompression.Rle : ImageCompression.Raw;
+                    ch.ImageCompression = compress;
                     Channels.Add(ch);
                 }
             }
@@ -410,7 +410,7 @@ namespace PhotoshopFile
             Parallel.ForEach(Channels,
                 channel =>
                 {
-                    channel.ImageCompression = rleCompress ? ImageCompression.Rle : ImageCompression.Raw;
+                    channel.ImageCompression = compress;
                     channel.CompressImageData();
                 }
             );
