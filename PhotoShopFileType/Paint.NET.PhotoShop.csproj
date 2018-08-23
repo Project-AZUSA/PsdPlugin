@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A04EEDD9-E164-4941-9846-722ACF2FCCA1}</ProjectGuid>
+    <ProjectGuid>{5AB78502-803E-4BBB-9EB4-190C63AE644C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PhotoShop</RootNamespace>
