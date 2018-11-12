@@ -676,7 +676,7 @@ namespace PhotoshopFile
                 versionInfo.Version = 1;
                 versionInfo.HasRealMergedData = true;
                 versionInfo.ReaderName = "Paint.NET PSD Plugin";
-                versionInfo.WriterName = "Paint.NET PSD Plugin " + versionString;
+                versionInfo.WriterName = "Paint.NET PSD Plugin (FreeMote ver.)" + versionString;
                 versionInfo.FileVersion = 1;
             }
         }
