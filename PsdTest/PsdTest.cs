@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PhotoshopFile;
@@ -23,8 +22,7 @@ namespace PsdTest
                 var info = image;
                 if (info is XmpResource xmp)
                 {
-                    var t = xmp.XmpInfo;
-                    var x = XmpMetaFactory.ParseFromString(t);
+                    var x = xmp.XmpMeta;
                     foreach (var property in x.Properties)
                     {
                         var l = $"Path={property.Path} Namespace={property.Namespace} Value={property.Value}";
@@ -56,7 +54,7 @@ namespace PsdTest
                 ImageCompression = ImageCompression.Rle
             };
 
-            psd.ImageResources.Add(new XmpResource(""){XmpInfo = File.ReadAllText(path) });
+            psd.ImageResources.Add(new XmpResource(""){XmpMetaString = File.ReadAllText(path) });
             psd.Save("xmp.psd", Encoding.UTF8);
         }
     }
