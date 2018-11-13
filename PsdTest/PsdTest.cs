@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PhotoshopFile;
 using XmpCore;
+using XmpCore.Options;
 
 namespace PsdTest
 {
@@ -20,7 +21,7 @@ namespace PsdTest
             foreach (var image in psd.ImageResources)
             {
                 var info = image;
-                if (info is XmpRawResource xmp)
+                if (info is XmpResource xmp)
                 {
                     var t = xmp.XmpInfo;
                     var x = XmpMetaFactory.ParseFromString(t);
@@ -28,6 +29,8 @@ namespace PsdTest
                     {
                         var l = $"Path={property.Path} Namespace={property.Namespace} Value={property.Value}";
                     }
+
+                    var s = XmpMetaFactory.SerializeToString(x,new SerializeOptions());
                 }
             }
         }
@@ -53,7 +56,7 @@ namespace PsdTest
                 ImageCompression = ImageCompression.Rle
             };
 
-            psd.ImageResources.Add(new XmpRawResource(""){XmpInfo = File.ReadAllText(path) });
+            psd.ImageResources.Add(new XmpResource(""){XmpInfo = File.ReadAllText(path) });
             psd.Save("xmp.psd", Encoding.UTF8);
         }
     }

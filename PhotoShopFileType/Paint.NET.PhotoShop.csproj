@@ -148,9 +148,13 @@
       <Link>PsdFile\Util.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PsdFile\ImageResources\XmpRawResource.cs" />
+    <Compile Include="PsdFile\ImageResources\XmpResource.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <PackageReference Include="XmpCore">
+      <Version>6.1.10</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
