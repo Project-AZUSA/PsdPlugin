@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paint.NET.PhotoShop", "PhotoShopFileType\Paint.NET.PhotoShop.csproj", "{5AB78502-803E-4BBB-9EB4-190C63AE644C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsdTest", "PsdTest\PsdTest.csproj", "{8F192F60-5822-482A-AEE8-05B7B3BC8ABA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5AB78502-803E-4BBB-9EB4-190C63AE644C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AB78502-803E-4BBB-9EB4-190C63AE644C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AB78502-803E-4BBB-9EB4-190C63AE644C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F192F60-5822-482A-AEE8-05B7B3BC8ABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F192F60-5822-482A-AEE8-05B7B3BC8ABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F192F60-5822-482A-AEE8-05B7B3BC8ABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F192F60-5822-482A-AEE8-05B7B3BC8ABA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
