@@ -1,14 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Paint.NET.PhotoShop</id>
-    <version>0.1.0</version>
-    <title>Paint.NET.PhotoShop</title>
+    <id>Paint.NET.Photoshop</id>
+    <version>2.5.0</version>
+    <title>Paint.NET.Photoshop</title>
     <authors>Frank Blumenberg,Tao Yue,Ulysses</authors>
     <owners>Ulysses</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/Project-AZUSA/PsdPlugin/blob/standalone/License.txt</licenseUrl>
     <projectUrl>https://github.com/Project-AZUSA/PsdPlugin</projectUrl>
     <description>Read and write PSD file.</description>
+    <dependencies>
+      <dependency id="XmpCore" version="6.1.10" />
+    </dependencies>
   </metadata>
 </package>
